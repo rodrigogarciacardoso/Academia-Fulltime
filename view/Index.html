@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/site.css">
+
+    <title>CRUD Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <h3 class="text-muted">Vendas</h3>
+        </div>
+        <!-- Início Grid Exibição -->
+        <div id="grid">
+            <a class="btn btn-success btn-incluir col-xs-offset-12" role="button"><i class="glyphicon glyphicon-plus"></i></a>
+            <table id="tabela" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col-lg-1">#</th>
+                        <th scope="col-lg-2">Data Hora</th>
+                        <th scope="col-lg-6">Cliente</th>
+                        <th scope="col-lg-1">Valor</th>
+                        <th scope="col-lg-2">Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="gridVenda">
+                </tbody>
+            </table>
+        </div>
+        <!-- Fim Grid Exibição -->
+
+        <!-- início Formulario -->
+        <div id="formulario" class="container invisivel">
+            <a class="btn btn-default btn-voltar" role="button"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <br><br>
+            <form>
+                <div class="row">
+                    <div class="form-group col-md-5">
+                        <div class="form-group">
+                            <label for="txt_dataHora">Data Hora</label>
+                            <div class='input-group date' id='txt_dataHora'>
+                                <input type='text' class="form-control" placeholder="Data e Hora" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-7">
+                        <label for="txt_cliente">Cliente</label>
+                        <input type="text" class="form-control" id="txt_cliente" placeholder="Cliente">
+                    </div>
+                    <div class="invisivel">
+                        <input type="text" id="id_venda">
+                    </div>
+                </div>
+                <h2>Itens</h2>
+                <a id="btn-incluir-item" class="btn btn-success col-xs-offset-12" role="button"><i class="glyphicon glyphicon-plus"></i></a>
+                <table id="tabela" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Descrição Item</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Valor Unitário</th>
+                            <th scope="col">Valor Total</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody class="gridItem">
+                    </tbody>
+                </table>
+                <p class="col-lg-offset-8 valorTotalGrid">Total: <span>0</span></p>
+                <a class="btn btn-primary btn-salvar" role="button">Salvar</a>
+            </form>
+        </div>
+        <!-- Fim Formulario -->
+    </div>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.maskMoney.min.js"></script>
+    <script src="../js/moment-with-locales.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    <script src="../js/site.js"></script>
+    <script src="../js/vendas.js"></script>
+</body>
+
+</html>
